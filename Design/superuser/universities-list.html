@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Courses List</title>
+    <title>Programs List</title>
     <!-- plugins:css -->
     <link rel="stylesheet" href="../assets/vendors/iconfonts/mdi/css/materialdesignicons.css">
     <link rel="stylesheet" href="../assets/vendors/css/vendor.addons.css">
@@ -45,57 +45,21 @@
             <img class="profile-img img-lg rounded-circle" src="../assets/images/profile/male/image_1.png" alt="profile image">
           </div>
           <div class="info-wrapper">
-            <h4 class="user-name">Mr. Admin</h4>
+            <h4 class="user-name">Mr. Manager</h4>
           </div>
         </div>
         <ul class="navigation-menu">
           <li class="nav-category-divider">MAIN</li>
-          <li>
-            <a href="dashboard.html">
-              <span class="link-title">Dashboard</span>
+          <li class="active">
+            <a href="universities-list.html">
+              <span class="link-title">Univiersity List</span>
               <i class="mdi mdi-gauge link-icon"></i>
             </a>
           </li>
           <li>
-            <a href="users-list.html">
-              <span class="link-title">Users</span>
+            <a href="add-university.html">
+              <span class="link-title">Add University</span>
               <i class="mdi mdi-account-multiple link-icon"></i>
-            </a>
-          </li>
-          <li>
-            <a href="schools-list.html">
-              <span class="link-title">Schools</span>
-              <i class="mdi mdi-animation link-icon"></i>
-            </a>
-          </li>
-          <li>
-            <a href="departments-list.html">
-              <span class="link-title">Departments</span>
-              <i class="mdi mdi-animation link-icon"></i>
-            </a>
-          </li>
-          <li>
-            <a href="programs-list.html">
-              <span class="link-title">Programs</span>
-              <i class="mdi mdi-clipboard-outline link-icon"></i>
-            </a>
-          </li>
-          <li class="active">
-            <a href="courses-list.html">
-              <span class="link-title">Courses</span>
-              <i class="mdi mdi-library-books link-icon"></i>
-            </a>
-          </li>
-          <li>
-            <a href="sections-list.html">
-              <span class="link-title">Sections</span>
-              <i class="mdi mdi-library-books link-icon"></i>
-            </a>
-          </li>
-          <li>
-            <a href="../login.html">
-              <span class="link-title">Logout</span>
-              <i class="mdi mdi-logout link-icon"></i>
             </a>
           </li>
         </ul>
@@ -113,13 +77,13 @@
                       <li class="breadcrumb-item">
                         <a href="dashboard.html">Admin</a>
                       </li>
-                      <li class="breadcrumb-item active" aria-current="page">Courses</li>                      
+                      <li class="breadcrumb-item active" aria-current="page">University</li>                      
                     </ol>
                   </nav>
                 </div>
               </div>
               <div class="col-3 py-5 text-right">
-                <a class="btn btn-success has-icon" href="course-create.html">
+                <a class="btn btn-success has-icon" href="add-university.html">
                   <i class="mdi mdi-account-plus-outline"></i>Add
                 </a>
               </div>
@@ -131,37 +95,22 @@
                     <table class="table display" id="user-table">
                       <thead>
                         <tr>
-                          <th>Course ID</th>
-                          <th>Course Title</th>
-                          <th>Program Id</th>
-                          <th>Course Level</th>
-                          <th>Course Type</th>
-                          <th>Credit</th>
-                          <th></th>
+                          <th>ID</th>
+                          <th>University Name</th>
+                          <th>Name of VC</th>
+                          <th>Email</th>
+                          <th>Total Schools</th>
+                          <th>Total Departments</th>
                         </tr>
                       </thead>
                       <tbody>
                         <tr>
-                          <td>CSE-303</td>
-                          <td>Database Management</td>
-                          <td>CSE</td>
-                          <td>200</td>
-                          <td>Major</td>
-                          <td>3.00</td>
-                          <td class="actions">
-                            <i class="mdi mdi-dots-vertical"></i>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>ART-303</td>
-                          <td>Bangladesh Studeis</td>
-                          <td>ART</td>
-                          <td>100</td>
-                          <td>Minor</td>
-                          <td>2.00</td>
-                          <td class="actions">
-                            <i class="mdi mdi-dots-vertical"></i>
-                          </td>
+                          <td>IUB</td>
+                          <td>Independent University, Bangladesh</td>
+                          <td>MR. VC</td>
+                          <td>contact@iub.edu.bd</td>
+                          <td>6</td>
+                          <td>16</td>
                         </tr>
                       </tbody>
                     </table>
@@ -198,8 +147,6 @@
     <!-- endinject -->
     <!-- Vendor Js For This Page Ends-->
     <script src="../assets/vendors/apexcharts/apexcharts.min.js"></script>
-    <script src="../assets/vendors/chartjs/Chart.min.js"></script>
-    <script src="../assets/js/charts/chartjs.addon.js"></script>
     <script src="../assets/vendors/js/vendor.addons.js"></script>
     <script src="../assets/vendors/jquery/jquery-3.6.0.min.js"></script>
     <script src="../assets/vendors/datatables/jquery.dataTables.js"></script>

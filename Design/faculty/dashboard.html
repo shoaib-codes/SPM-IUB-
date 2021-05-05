@@ -3,13 +3,12 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Create Assessment</title>
+    <title>Instructor Dashboard</title>
     <!-- plugins:css -->
     <link rel="stylesheet" href="../assets/vendors/iconfonts/mdi/css/materialdesignicons.css">
     <link rel="stylesheet" href="../assets/vendors/css/vendor.addons.css">
     <!-- endinject -->
     <!-- vendor css for this page -->
-    <link rel="stylesheet" href="../assets/vendors/datatables/jquery.dataTables.css">
     <!-- End vendor css for this page -->
     <!-- inject:css -->
     <link rel="stylesheet" href="../assets/css/shared/style.css">
@@ -45,7 +44,23 @@
             <img class="profile-img img-lg rounded-circle" src="../assets/images/profile/male/image_1.png" alt="profile image">
           </div>
           <div class="info-wrapper">
-            <h4 class="user-name">Mr. Instructor</h4>
+            <h4 class="user-name">Mr. Faculty</h4>
+          </div>
+          <div class="row showcase_row_area mt-4">
+            <div class="col-md-4 text-right">
+              <label for="inputType14">Faculty</label>
+            </div>
+            <div class="col-md-4 showcase_content_area mb-2">
+              <div class="demo-wrapper">
+                <div class="custom-control custom-switch">
+                  <input type="checkbox" class="custom-control-input" id="role-switch"> 
+                  <label class="custom-control-label" for="role-switch"></label>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 text-left">
+              <label for="inputType14">Dean</label>
+            </div>
           </div>
         </div>
         <ul class="navigation-menu">
@@ -56,7 +71,13 @@
               <i class="mdi mdi-gauge link-icon"></i>
             </a>
           </li>
-          <li class="active">
+          <li>
+            <a href="sections-list.html">
+              <span class="link-title">Sections</span>
+              <i class="mdi mdi-gauge link-icon"></i>
+            </a>
+          </li>
+          <li>
             <a href="assessments-list.html">
               <span class="link-title">Assessments</span>
               <i class="mdi mdi-clipboard link-icon"></i>
@@ -93,75 +114,78 @@
                   <nav aria-label="breadcrumb">
                     <ol class="breadcrumb has-arrow">
                       <li class="breadcrumb-item">
-                        <a href="dashboard.html">Admin</a>
+                        <a href="dashboard.html">Instructor</a>
                       </li>
-                      <li class="breadcrumb-item">
-                        <a href="assessments-list.html">Assessments</a>
-                      </li>
-                      <li class="breadcrumb-item active" aria-current="page">Create Assessment</li>                      
+                      <li class="breadcrumb-item active" aria-current="page">Dashboard</li>                      
                     </ol>
                   </nav>
                 </div>
               </div>
             </div>
-            <div class="col-lg-12">
-              <div class="grid">
-                <div class="grid-body">
-                  <div class="item-wrapper">
-                    <div class="row mb-3">
-                      <div class="col-md-8 mx-auto">
-                        <div class="form-group row showcase_row_area">
-                          <div class="col-md-3 showcase_text_area">
-                            <label for="user_id">Semester</label>
-                          </div>
-                          <div class="col-md-9 showcase_content_area">
-                            <input type="text" class="form-control" id="user_id" name="user_id" placeholder="Enter Semester">
-                          </div>
+            <div class="row">
+              <div class="col-md-3 col-sm-6 col-6 equel-grid">
+                <div class="grid">
+                  <div class="grid-body text-gray">
+                    <div class="row">
+                      <div class="col-9">
+                        <div class="d-flex justify-content-between">
+                          <p class="card-title">128</p>
                         </div>
-                        <div class="form-group row showcase_row_area">
-                          <div class="col-md-3 showcase_text_area">
-                            <label for="f_name">Section</label>
-                          </div>
-                          <div class="col-md-9 showcase_content_area">
-                            <input type="text" class="form-control" id="f_name" name="f_name" placeholder="Enter Section">
-                          </div>
+                        <h5 class="text-black">Assessments</h5>
+                      </div>
+                      <div class="col-3">
+                        <h1><i class="mdi mdi-account-multiple"></i></h1>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3 col-sm-6 col-6 equel-grid">
+                <div class="grid">
+                  <div class="grid-body text-gray">
+                    <div class="row">
+                      <div class="col-9">
+                        <div class="d-flex justify-content-between">
+                          <p class="card-title">128</p>
                         </div>
-                        <div class="form-group row showcase_row_area">
-                          <div class="col-md-3 showcase_text_area">
-                            <label for="f_name">Course Id</label>
-                          </div>
-                          <div class="col-md-9 showcase_content_area">
-                            <input type="text" class="form-control" id="f_name" name="f_name" placeholder="Enter Course Id">
-                          </div>
+                        <h5 class="text-black">Total Batch</h5>
+                      </div>
+                      <div class="col-3">
+                        <h1><i class="mdi mdi-animation"></i></h1>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3 col-sm-6 col-6 equel-grid">
+                <div class="grid">
+                  <div class="grid-body text-gray">
+                    <div class="row">
+                      <div class="col-9">
+                        <div class="d-flex justify-content-between">
+                          <p class="card-title">128</p>
                         </div>
-                        <div class="form-group row showcase_row_area">
-                          <div class="col-md-3 showcase_text_area">
-                            <label>Assessment Type</label>
-                          </div>
-                          <div class="col-md-9 showcase_content_area">
-                            <select class="custom-select">
-                              <option value="Student" selected>Mid-term</option>
-                              <option value="Instructor">Final</option>
-                              <option value="HigherAuthority">Lab</option>
-                              <option value="Admin">Tutorial</option>
-                            </select>
-                          </div>
+                        <h5 class="text-black">Total Programs</h5>
+                      </div>
+                      <div class="col-3">
+                        <h1><i class="mdi mdi-clipboard-outline"></i></h1>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3 col-sm-6 col-6 equel-grid">
+                <div class="grid">
+                  <div class="grid-body text-gray">
+                    <div class="row">
+                      <div class="col-9">
+                        <div class="d-flex justify-content-between">
+                          <p class="card-title">128</p>
                         </div>
-                        <div class="row showcase_row_area mb-3">
-                          <div class="col-md-3 showcase_text_area">
-                            <label>File Upload<span style="color: red;">*</span></label>
-                          </div>
-                          <div class="col-md-9 showcase_content_area">
-                            <div class="custom-file">
-                              <input type="file" class="custom-file-input" id="customFile">
-                              <label class="custom-file-label" for="customFile">Choose file</label>
-                              <p class="text-muted mt-2">
-                                <small><span style="color: red;">*</span>Instructor must upload a specificicaly formatted csv file.</small>
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                        <input type="submit" class="btn btn-primary" value="Submit">
+                        <h5 class="text-black">Total Courses</h5>
+                      </div>
+                      <div class="col-3">
+                        <h1><i class="mdi mdi-library-books"></i></h1>
                       </div>
                     </div>
                   </div>
@@ -197,18 +221,18 @@
     <!-- endinject -->
     <!-- Vendor Js For This Page Ends-->
     <script src="../assets/vendors/apexcharts/apexcharts.min.js"></script>
+    <script src="../assets/vendors/chartjs/Chart.min.js"></script>
+    <script src="../assets/js/charts/chartjs.addon.js"></script>
     <script src="../assets/vendors/js/vendor.addons.js"></script>
-    <script src="../assets/vendors/jquery/jquery-3.6.0.min.js"></script>
-    <script src="../assets/vendors/datatables/jquery.dataTables.js"></script>
     <!-- Vendor Js For This Page Ends-->
     <!-- build:js -->
     <script src="../assets/js/template.js"></script>
     <script src="../assets/js/dashboard.js"></script>
     <!-- endbuild -->
     <script>
-      $(document).ready(function() {
-          $('#user-table').DataTable();
-      } );
+      $("#role-switch").change(function(){
+        window.location.href = "../dean/dashboard.html";
+      });
     </script>
   </body>
 </html>

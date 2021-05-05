@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Create Assessment</title>
+    <title>Question Bank</title>
     <!-- plugins:css -->
     <link rel="stylesheet" href="../assets/vendors/iconfonts/mdi/css/materialdesignicons.css">
     <link rel="stylesheet" href="../assets/vendors/css/vendor.addons.css">
@@ -56,7 +56,7 @@
               <i class="mdi mdi-gauge link-icon"></i>
             </a>
           </li>
-          <li class="active">
+          <li>
             <a href="assessments-list.html">
               <span class="link-title">Assessments</span>
               <i class="mdi mdi-clipboard link-icon"></i>
@@ -68,7 +68,7 @@
               <i class="mdi mdi-chart-areaspline link-icon"></i>
             </a>
           </li>
-          <li>
+          <li class="active">
             <a href="question-banks.html">
               <span class="link-title">Question Bank</span>
               <i class="mdi mdi-book-open-variant link-icon"></i>
@@ -87,83 +87,66 @@
         <div class="page-content-wrapper-inner">
           <div class="content-viewport">
             <div class="row">
-              <div class="col-12 py-5">
-                <h4>Dashboard</h4>
+              <div class="col-9 py-5">
+                <h4>Question Banks</h4>
                 <div class="viewport-header">
                   <nav aria-label="breadcrumb">
                     <ol class="breadcrumb has-arrow">
                       <li class="breadcrumb-item">
-                        <a href="dashboard.html">Admin</a>
+                        <a href="dashboard.html">Instructor</a>
                       </li>
-                      <li class="breadcrumb-item">
-                        <a href="assessments-list.html">Assessments</a>
-                      </li>
-                      <li class="breadcrumb-item active" aria-current="page">Create Assessment</li>                      
+                      <li class="breadcrumb-item active" aria-current="page">Question Banks</li>                      
                     </ol>
                   </nav>
                 </div>
               </div>
+              <div class="col-3 py-5 text-right">
+                <a class="btn btn-success has-icon" href="question-create.html">
+                  <i class="mdi mdi-account-plus-outline"></i>Add
+                </a>
+              </div>
             </div>
             <div class="col-lg-12">
               <div class="grid">
-                <div class="grid-body">
-                  <div class="item-wrapper">
-                    <div class="row mb-3">
-                      <div class="col-md-8 mx-auto">
-                        <div class="form-group row showcase_row_area">
-                          <div class="col-md-3 showcase_text_area">
-                            <label for="user_id">Semester</label>
-                          </div>
-                          <div class="col-md-9 showcase_content_area">
-                            <input type="text" class="form-control" id="user_id" name="user_id" placeholder="Enter Semester">
-                          </div>
-                        </div>
-                        <div class="form-group row showcase_row_area">
-                          <div class="col-md-3 showcase_text_area">
-                            <label for="f_name">Section</label>
-                          </div>
-                          <div class="col-md-9 showcase_content_area">
-                            <input type="text" class="form-control" id="f_name" name="f_name" placeholder="Enter Section">
-                          </div>
-                        </div>
-                        <div class="form-group row showcase_row_area">
-                          <div class="col-md-3 showcase_text_area">
-                            <label for="f_name">Course Id</label>
-                          </div>
-                          <div class="col-md-9 showcase_content_area">
-                            <input type="text" class="form-control" id="f_name" name="f_name" placeholder="Enter Course Id">
-                          </div>
-                        </div>
-                        <div class="form-group row showcase_row_area">
-                          <div class="col-md-3 showcase_text_area">
-                            <label>Assessment Type</label>
-                          </div>
-                          <div class="col-md-9 showcase_content_area">
-                            <select class="custom-select">
-                              <option value="Student" selected>Mid-term</option>
-                              <option value="Instructor">Final</option>
-                              <option value="HigherAuthority">Lab</option>
-                              <option value="Admin">Tutorial</option>
-                            </select>
-                          </div>
-                        </div>
-                        <div class="row showcase_row_area mb-3">
-                          <div class="col-md-3 showcase_text_area">
-                            <label>File Upload<span style="color: red;">*</span></label>
-                          </div>
-                          <div class="col-md-9 showcase_content_area">
-                            <div class="custom-file">
-                              <input type="file" class="custom-file-input" id="customFile">
-                              <label class="custom-file-label" for="customFile">Choose file</label>
-                              <p class="text-muted mt-2">
-                                <small><span style="color: red;">*</span>Instructor must upload a specificicaly formatted csv file.</small>
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                        <input type="submit" class="btn btn-primary" value="Submit">
-                      </div>
-                    </div>
+                <div class="item-wrapper">
+                  <div class="table-responsive">
+                    <table class="table display" id="user-table">
+                      <thead>
+                        <tr>
+                          <th>Semester</th>
+                          <th>Course ID</th>
+                          <th>Section</th>
+                          <th>Exam Type</th>
+                          <th>Question Mark</th>
+                          <th>Assigned CO</th>
+                          <th>Question Paper</th>
+                          <th>Answer Sheet</th>
+                          <th></th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Summer-2020</td>
+                          <td>CSE-303</td>
+                          <td>A</td>
+                          <td>Mid</td>
+                          <td>20</td>
+                          <td>1</td>
+                          <td><button type="button" class="btn btn-success btn-xs">Expand</button></td>
+                          <td><button type="button" class="btn btn-info btn-xs">Expand</button></td>
+                        </tr>
+                        <tr>
+                          <td>Summer-2020</td>
+                          <td>CSE-101</td>
+                          <td>B</td>
+                          <td>Final</td>
+                          <td>25</td>
+                          <td>3</td>
+                          <td><button type="button" class="btn btn-success btn-xs">Expand</button></td>
+                          <td><button type="button" class="btn btn-info btn-xs">Expand</button></td>
+                        </tr>
+                      </tbody>
+                    </table>
                   </div>
                 </div>
               </div>

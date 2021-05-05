@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Create Program</title>
+    <title>Add University</title>
     <!-- plugins:css -->
     <link rel="stylesheet" href="../assets/vendors/iconfonts/mdi/css/materialdesignicons.css">
     <link rel="stylesheet" href="../assets/vendors/css/vendor.addons.css">
@@ -45,57 +45,21 @@
             <img class="profile-img img-lg rounded-circle" src="../assets/images/profile/male/image_1.png" alt="profile image">
           </div>
           <div class="info-wrapper">
-            <h4 class="user-name">Mr. Admin</h4>
+            <h4 class="user-name">Mr. Manager</h4>
           </div>
         </div>
         <ul class="navigation-menu">
           <li class="nav-category-divider">MAIN</li>
           <li>
-            <a href="dashboard.html">
-              <span class="link-title">Dashboard</span>
+            <a href="universities-list.html">
+              <span class="link-title">Univiersity List</span>
               <i class="mdi mdi-gauge link-icon"></i>
             </a>
           </li>
-          <li>
-            <a href="users-list.html">
-              <span class="link-title">Users</span>
-              <i class="mdi mdi-account-multiple link-icon"></i>
-            </a>
-          </li>
-          <li>
-            <a href="schools-list.html">
-              <span class="link-title">Schools</span>
-              <i class="mdi mdi-animation link-icon"></i>
-            </a>
-          </li>
-          <li>
-            <a href="departments-list.html">
-              <span class="link-title">Departments</span>
-              <i class="mdi mdi-clipboard-outline link-icon"></i>
-            </a>
-          </li>
           <li class="active">
-            <a href="programs-list.html">
-              <span class="link-title">Programs</span>
-              <i class="mdi mdi-clipboard-outline link-icon"></i>
-            </a>
-          </li>
-          <li>
-            <a href="courses-list.html">
-              <span class="link-title">Courses</span>
-              <i class="mdi mdi-library-books link-icon"></i>
-            </a>
-          </li>
-          <li>
-            <a href="sections-list.html">
-              <span class="link-title">Sections</span>
-              <i class="mdi mdi-library-books link-icon"></i>
-            </a>
-          </li>
-          <li>
-            <a href="../login.html">
-              <span class="link-title">Logout</span>
-              <i class="mdi mdi-logout link-icon"></i>
+            <a href="add-university.html">
+              <span class="link-title">Add University</span>
+              <i class="mdi mdi-account-multiple link-icon"></i>
             </a>
           </li>
         </ul>
@@ -111,12 +75,12 @@
                   <nav aria-label="breadcrumb">
                     <ol class="breadcrumb has-arrow">
                       <li class="breadcrumb-item">
-                        <a href="dashboard.html">Admin</a>
+                        <a href="dashboard.html">Manager</a>
                       </li>
                       <li class="breadcrumb-item">
-                        <a href="programs-list.html">Programs</a>
+                        <a href="programs-list.html">University</a>
                       </li>
-                      <li class="breadcrumb-item active" aria-current="page">Create Program</li>                      
+                      <li class="breadcrumb-item active" aria-current="page">Add University</li>                      
                     </ol>
                   </nav>
                 </div>
@@ -131,68 +95,79 @@
                         <div class="col-md-8 mx-auto">
                           <div class="form-group row showcase_row_area">
                             <div class="col-md-3 showcase_text_area">
-                              <label>Department</label>
+                              <label for="program_name">University ID</label>
                             </div>
                             <div class="col-md-9 showcase_content_area">
-                              <select class="custom-select">
-                                <option value="1" selected>CSE</option>
-                                <option value="2">EEE</option>
-                                <option value="3">ACC</option>
-                              </select>
+                              <input type="text" class="form-control" id="program_name" name="program_name" placeholder="University ID">
                             </div>
                           </div>
                           <div class="form-group row showcase_row_area">
                             <div class="col-md-3 showcase_text_area">
-                              <label for="program_name">Program Name</label>
+                              <label for="program_name">University Name</label>
                             </div>
                             <div class="col-md-9 showcase_content_area">
-                              <input type="text" class="form-control" id="program_name" name="program_name" placeholder="Enter Program Name">
+                              <input type="text" class="form-control" id="program_name" name="program_name" placeholder="University Name">
                             </div>
                           </div>
                           <div class="form-group row showcase_row_area">
                             <div class="col-md-3 showcase_text_area">
-                              <label for="program_name">Total Credits</label>
+                              <label for="program_name">Name of VC</label>
                             </div>
                             <div class="col-md-9 showcase_content_area">
-                              <input type="text" class="form-control" id="program_name" name="program_name" placeholder="Enter Total Credits">
+                              <input type="text" class="form-control" id="program_name" name="program_name" placeholder="Name of VC">
                             </div>
                           </div>
                           <div class="form-group row showcase_row_area">
                             <div class="col-md-3 showcase_text_area">
-                              <label for="program_name">Total PLO</label>
+                              <label for="program_name">University Email</label>
                             </div>
                             <div class="col-md-9 showcase_content_area">
-                              <input type="text" class="form-control" id="total_plo" name="total_plo" placeholder="Enter Total PLO">
+                              <input type="text" class="form-control" id="program_name" name="program_name" placeholder="University Email">
                             </div>
                           </div>
-                        </div>
-                      </div>
-                      <div class="row mb-3" id="part-2" hidden>
-                        <div class="col-md-8 mx-auto" id="plo-box">
                           <div class="form-group row showcase_row_area">
-                            <div class="col-2 showcase_text_area">
-                              <label for="plo1">PLO 1</label>
+                            <div class="col-md-3 showcase_text_area">
+                              <label for="program_name">Address</label>
                             </div>
-                            <div class="col-8 showcase_content_area">
-                              <input type="text" class="form-control" id="plo1" name="plo1" placeholder="Enter PLO Title">
+                            <div class="col-md-9 showcase_content_area">
+                              <input type="text" class="form-control" id="program_name" name="program_name" placeholder="Address">
                             </div>
-                            <div class="col-2 showcase_content_area text-center">
-                              <button type="button" class="btn btn-outline-primary btn-rounded btn-sm plo-btn" onclick="addPloInput();">
-                                <i class="text-success mdi mdi-plus"></i>
-                              </button>
+                          </div>
+                          <div class="form-group row showcase_row_area">
+                            <div class="col-md-3 showcase_text_area">
+                              <label for="program_name">City</label>
+                            </div>
+                            <div class="col-md-9 showcase_content_area">
+                              <input type="text" class="form-control" id="program_name" name="program_name" placeholder="City">
+                            </div>
+                          </div>
+                          <div class="form-group row showcase_row_area">
+                            <div class="col-md-3 showcase_text_area">
+                              <label for="program_name">Country</label>
+                            </div>
+                            <div class="col-md-9 showcase_content_area">
+                              <input type="text" class="form-control" id="program_name" name="program_name" placeholder="Country">
+                            </div>
+                          </div>
+                          <div class="form-group row showcase_row_area">
+                            <div class="col-md-3 showcase_text_area">
+                              <label for="program_name">Admin Email</label>
+                            </div>
+                            <div class="col-md-9 showcase_content_area">
+                              <input type="text" class="form-control" id="program_name" name="program_name" placeholder="Admin Email">
+                            </div>
+                          </div>
+                          <div class="form-group row showcase_row_area">
+                            <div class="col-md-3 showcase_text_area">
+                              <label for="program_name">Admin Password</label>
+                            </div>
+                            <div class="col-md-9 showcase_content_area">
+                              <input type="password" class="form-control" id="program_name" name="program_name" placeholder="Admin Password">
                             </div>
                           </div>
                         </div>
                       </div>
-                      <div class="row">
-                        <div class="col-6 text-left">
-                            <button type="button" class="btn btn-info" id="back-btn" hidden>Back</button>
-                        </div>
-                        <div class="col-6 text-right">
-                          <button type="button" class="btn btn-primary" id="next-btn">Next</button>
-                          <button type="submit" class="btn btn-success" id="sub-btn" hidden>Submit</button>
-                        </div>
-                      </div>
+                      <button type="submit" class="btn btn-success" id="sub-btn">Submit</button>
                     </form>
                   </div>
                 </div>
@@ -238,8 +213,8 @@
     <script src="../assets/js/dashboard.js"></script>
     <!-- endbuild -->
     <script>
+      $plo = 1;
       $('#next-btn').click(function(){
-        generatePLO();
         $('#part-1').attr('hidden', true);
         $('#next-btn').attr('hidden', true);
         $('#part-2').removeAttr('hidden');
@@ -254,21 +229,23 @@
         $('#next-btn').removeAttr('hidden');
       });
 
-      function generatePLO(){
-        $("#plo-box").empty();
-        $plo = $("#total_plo").val();
-        for($i=1; $i<=$plo; $i++){
-          $("#plo-box").append(`<div class="form-group row showcase_row_area">
+      function addPloInput(){
+        $plo++;
+        $(".plo-btn").attr('hidden', true);
+        $("#plo-box").append(`<div class="form-group row showcase_row_area">
                             <div class="col-2 showcase_text_area">
-                              <label for="plo`+ $i +`">PLO `+ $i +`</label>
+                              <label for="plo`+ $plo +`">PLO `+ $plo +`</label>
                             </div>
-                            <div class="col-10 showcase_content_area">
-                              <input type="text" class="form-control" id="plo`+ $i +`" name="plo`+ $i +`" placeholder="Enter PLO Title">
+                            <div class="col-8 showcase_content_area">
+                              <input type="text" class="form-control" id="plo`+ $plo +`" name="plo`+ $plo +`" placeholder="Enter PLO Title">
+                            </div>
+                            <div class="col-2 showcase_content_area text-center">
+                              <button type="button" class="btn btn-outline-primary btn-rounded btn-sm plo-btn" onclick="addPloInput();">
+                                <i class="text-success mdi mdi-plus"></i>
+                              </button>
                             </div>
                           </div>`);
-        }
-      }
-
+      };
 
     </script>
   </body>

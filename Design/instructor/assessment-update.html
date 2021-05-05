@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Create Assessment</title>
+    <title>Update Assessment</title>
     <!-- plugins:css -->
     <link rel="stylesheet" href="../assets/vendors/iconfonts/mdi/css/materialdesignicons.css">
     <link rel="stylesheet" href="../assets/vendors/css/vendor.addons.css">
@@ -88,7 +88,7 @@
           <div class="content-viewport">
             <div class="row">
               <div class="col-12 py-5">
-                <h4>Dashboard</h4>
+                <h4>Upadte Assessment</h4>
                 <div class="viewport-header">
                   <nav aria-label="breadcrumb">
                     <ol class="breadcrumb has-arrow">
@@ -98,7 +98,7 @@
                       <li class="breadcrumb-item">
                         <a href="assessments-list.html">Assessments</a>
                       </li>
-                      <li class="breadcrumb-item active" aria-current="page">Create Assessment</li>                      
+                      <li class="breadcrumb-item active" aria-current="page">Update Assessment</li>                      
                     </ol>
                   </nav>
                 </div>
@@ -147,18 +147,44 @@
                             </select>
                           </div>
                         </div>
-                        <div class="row showcase_row_area mb-3">
+                        <div class="form-group row showcase_row_area">
                           <div class="col-md-3 showcase_text_area">
-                            <label>File Upload<span style="color: red;">*</span></label>
+                            <label for="f_name">Student Id</label>
                           </div>
                           <div class="col-md-9 showcase_content_area">
-                            <div class="custom-file">
-                              <input type="file" class="custom-file-input" id="customFile">
-                              <label class="custom-file-label" for="customFile">Choose file</label>
-                              <p class="text-muted mt-2">
-                                <small><span style="color: red;">*</span>Instructor must upload a specificicaly formatted csv file.</small>
-                              </p>
-                            </div>
+                            <input type="text" class="form-control" id="f_name" name="f_name" placeholder="Enter Student Id">
+                          </div>
+                        </div>
+                        <div class="form-group row showcase_row_area">
+                          <div class="col-md-3 showcase_text_area">
+                            <label for="f_name">Question Number</label>
+                          </div>
+                          <div class="col-md-9 showcase_content_area">
+                            <input type="text" class="form-control" id="f_name" name="f_name" placeholder="Enter Question Number">
+                          </div>
+                        </div>
+                        <div class="form-group row showcase_row_area">
+                          <div class="col-md-3 showcase_text_area">
+                            <label for="f_name">Assigned CO</label>
+                          </div>
+                          <div class="col-md-9 showcase_content_area">
+                            <input type="text" class="form-control" id="f_name" name="f_name" placeholder="Enter Assigned Co">
+                          </div>
+                        </div>
+                        <div class="form-group row showcase_row_area">
+                          <div class="col-md-3 showcase_text_area">
+                            <label for="f_name">Achieved Mark</label>
+                          </div>
+                          <div class="col-md-9 showcase_content_area">
+                            <input type="text" class="form-control" id="f_name" name="f_name" placeholder="Enter Achieved Mark">
+                          </div>
+                        </div>
+                        <div class="form-group row showcase_row_area">
+                          <div class="col-md-3 showcase_text_area">
+                            <label for="f_name">Question Mark</label>
+                          </div>
+                          <div class="col-md-9 showcase_content_area">
+                            <input type="text" class="form-control" id="f_name" name="f_name" placeholder="Enter Question Mark">
                           </div>
                         </div>
                         <input type="submit" class="btn btn-primary" value="Submit">

@@ -1,9 +1,12 @@
+<?php
+    include '../php/middleware.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Dean Dashboard</title>
+    <title>Instructor Dashboard</title>
     <!-- plugins:css -->
     <link rel="stylesheet" href="../assets/vendors/iconfonts/mdi/css/materialdesignicons.css">
     <link rel="stylesheet" href="../assets/vendors/css/vendor.addons.css">
@@ -44,7 +47,7 @@
             <img class="profile-img img-lg rounded-circle" src="../assets/images/profile/male/image_1.png" alt="profile image">
           </div>
           <div class="info-wrapper">
-            <h4 class="user-name">Mr. Dean</h4>
+            <h4 class="user-name">Mr. Faculty</h4>
           </div>
           <div class="row showcase_row_area mt-4">
             <div class="col-md-4 text-right">
@@ -53,7 +56,7 @@
             <div class="col-md-4 showcase_content_area mb-2">
               <div class="demo-wrapper">
                 <div class="custom-control custom-switch">
-                  <input type="checkbox" class="custom-control-input" id="role-switch" checked> 
+                  <input type="checkbox" class="custom-control-input" id="role-switch"> 
                   <label class="custom-control-label" for="role-switch"></label>
                 </div>
               </div>
@@ -72,9 +75,27 @@
             </a>
           </li>
           <li>
-            <a href="enrollment-comparison.html">
-              <span class="link-title">Enrollment Comparison</span>
+            <a href="sections-list.php">
+              <span class="link-title">Sections</span>
               <i class="mdi mdi-gauge link-icon"></i>
+            </a>
+          </li>
+          <li>
+            <a href="assessments-list.php">
+              <span class="link-title">Assessments</span>
+              <i class="mdi mdi-clipboard link-icon"></i>
+            </a>
+          </li>
+          <li>
+            <a href="reports.html">
+              <span class="link-title">Reports</span>
+              <i class="mdi mdi-chart-areaspline link-icon"></i>
+            </a>
+          </li>
+          <li>
+            <a href="question-banks.php">
+              <span class="link-title">Question Bank</span>
+              <i class="mdi mdi-book-open-variant link-icon"></i>
             </a>
           </li>
           <li>
@@ -213,7 +234,7 @@
     <!-- endbuild -->
     <script>
       $("#role-switch").change(function(){
-        window.location.href = "../faculty/dashboard.php";
+        window.location.href = "../dean/dashboard.php";
       });
     </script>
   </body>

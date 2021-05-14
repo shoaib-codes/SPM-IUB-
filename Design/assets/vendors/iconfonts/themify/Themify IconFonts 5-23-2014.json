@@ -2555,7 +2555,7 @@
 					"id": 29,
 					"prevSize": 32,
 					"code": 59050,
-					"name": "dashboard.html",
+					"name": "dashboard.php",
 					"tempChar": "",
 					"ligatures": ""
 				},
@@ -3535,7 +3535,7 @@
 					],
 					"grid": 0,
 					"tags": [
-						"dashboard.html"
+						"dashboard.php"
 					]
 				},
 				{

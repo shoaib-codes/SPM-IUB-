@@ -1,9 +1,12 @@
+<?php
+  include '../php/university.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Assessments List</title>
+    <title>Programs List</title>
     <!-- plugins:css -->
     <link rel="stylesheet" href="../assets/vendors/iconfonts/mdi/css/materialdesignicons.css">
     <link rel="stylesheet" href="../assets/vendors/css/vendor.addons.css">
@@ -16,7 +19,7 @@
     <!-- endinject -->
     <!-- Layout style -->
     <link rel="stylesheet" href="../assets/css/demo_1/style.css">
-    <!-- Layout style -->
+
     <!-- <link rel="shortcut icon" href="asssets/images/favicon.ico" /> -->
   </head>
   <body class="header-fixed">
@@ -42,48 +45,24 @@
       <div class="sidebar">
         <div class="user-profile">
           <div class="display-avatar animated-avatar">
-            <img class="profile-img img-lg rounded-circle" src="../assets/images/profile/male/183759288_746868705989130_173060081250032509_n.png" alt="profile image">
+            <img class="profile-img img-lg rounded-circle" src="../assets/images/profile/male/image_1.png" alt="profile image">
           </div>
           <div class="info-wrapper">
-            <h4 class="user-name">Mr. Faculty</h4>
+            <h4 class="user-name">Mr. Manager</h4>
           </div>
         </div>
         <ul class="navigation-menu">
           <li class="nav-category-divider">MAIN</li>
-          <li>
-            <a href="dashboard.html">
-              <span class="link-title">Dashboard</span>
+          <li class="active">
+            <a href="universities-list.php">
+              <span class="link-title">Univiersity List</span>
               <i class="mdi mdi-gauge link-icon"></i>
             </a>
           </li>
           <li>
-            <a href="sections-list.html">
-              <span class="link-title">Section</span>
-              <i class="mdi mdi-book-open-variant link-icon"></i>
-            </a>
-          </li>
-          <li>
-            <a href="assessments-list.html">
-              <span class="link-title">Assessments</span>
-              <i class="mdi mdi-clipboard link-icon"></i>
-            </a>
-          </li>
-          <li>
-            <a href="reports.html">
-              <span class="link-title">Reports</span>
-              <i class="mdi mdi-chart-areaspline link-icon"></i>
-            </a>
-          </li>
-          <li>
-            <a href="question-banks.html">
-              <span class="link-title">Question Bank</span>
-              <i class="mdi mdi-book-open-variant link-icon"></i>
-            </a>
-          </li>
-          <li>
-            <a href="../login.html">
-              <span class="link-title">Logout</span>
-              <i class="mdi mdi-logout link-icon"></i>
+            <a href="add-university.php">
+              <span class="link-title">Add University</span>
+              <i class="mdi mdi-account-multiple link-icon"></i>
             </a>
           </li>
         </ul>
@@ -99,18 +78,15 @@
                   <nav aria-label="breadcrumb">
                     <ol class="breadcrumb has-arrow">
                       <li class="breadcrumb-item">
-                        <a href="dashboard.html">Admin</a>
+                        <a href="dashboard.php">Manager</a>
                       </li>
-                      <li class="breadcrumb-item active" aria-current="page">Assessments</li>                      
+                      <li class="breadcrumb-item active" aria-current="page">University</li>                      
                     </ol>
                   </nav>
                 </div>
               </div>
               <div class="col-3 py-5 text-right">
-                <a class="btn btn-warning has-icon mr-2" href="assessment-update.html">
-                  <i class="mdi mdi-lead-pencil"></i>Update
-                </a>
-                <a class="btn btn-success has-icon" href="assessment-create.html">
+                <a class="btn btn-success has-icon" href="add-university.php">
                   <i class="mdi mdi-account-plus-outline"></i>Add
                 </a>
               </div>
@@ -122,41 +98,29 @@
                     <table class="table display" id="user-table">
                       <thead>
                         <tr>
-                          <th>Semester</th>
-                          <th>Section</th>
-                          <th>Course Title</th>
-                          <th>Total Students</th>
-                          <th></th>
+                          <th>ID</th>
+                          <th>University Name</th>
+                          <th>Name of VC</th>
+                          <th>Email</th>
+                          <th>Total Schools</th>
+                          <th>Total Departments</th>
                         </tr>
                       </thead>
                       <tbody>
-                        <tr>
-                          <td>Summer-2020</td>
-                          <td>A</td>
-                          <td>Database Management</td>
-                          <td>42</td>
-                          <td class="actions">
-                            <i class="mdi mdi-dots-vertical"></i>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>Summer-2018</td>
-                          <td>B</td>
-                          <td>Object Oriented Programming with Java</td>
-                          <td>38</td>
-                          <td class="actions">
-                            <i class="mdi mdi-dots-vertical"></i>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>Fall-2019</td>
-                          <td>A</td>
-                          <td>Database Management</td>
-                          <td>50</td>
-                          <td class="actions">
-                            <i class="mdi mdi-dots-vertical"></i>
-                          </td>
-                        </tr>
+                        <?php
+                          foreach ($datas as $data){
+                            echo "
+                            <tr>
+                              <td>".$data['id']."</td>
+                              <td>".$data['name']."</td>
+                              <td>".$data['vc']."</td>
+                              <td>".$data['email']."</td>
+                              <td>".$data['school']."</td>
+                              <td>".$data['department']."</td>
+                            </tr>
+                            ";
+                          }
+                        ?>
                       </tbody>
                     </table>
                   </div>

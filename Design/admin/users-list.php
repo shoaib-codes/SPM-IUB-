@@ -1,9 +1,13 @@
+<?php 
+  include '../php/middleware.php';
+  include '../php/user.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Assessments List</title>
+    <title>Users List</title>
     <!-- plugins:css -->
     <link rel="stylesheet" href="../assets/vendors/iconfonts/mdi/css/materialdesignicons.css">
     <link rel="stylesheet" href="../assets/vendors/css/vendor.addons.css">
@@ -16,7 +20,7 @@
     <!-- endinject -->
     <!-- Layout style -->
     <link rel="stylesheet" href="../assets/css/demo_1/style.css">
-    <!-- Layout style -->
+
     <!-- <link rel="shortcut icon" href="asssets/images/favicon.ico" /> -->
   </head>
   <body class="header-fixed">
@@ -42,46 +46,58 @@
       <div class="sidebar">
         <div class="user-profile">
           <div class="display-avatar animated-avatar">
-            <img class="profile-img img-lg rounded-circle" src="../assets/images/profile/male/183759288_746868705989130_173060081250032509_n.png" alt="profile image">
+            <img class="profile-img img-lg rounded-circle" src="../assets/images/profile/male/image_1.png" alt="profile image">
           </div>
           <div class="info-wrapper">
-            <h4 class="user-name">Mr. Faculty</h4>
+            <h4 class="user-name">Mr. Admin</h4>
           </div>
         </div>
         <ul class="navigation-menu">
           <li class="nav-category-divider">MAIN</li>
           <li>
-            <a href="dashboard.html">
+            <a href="dashboard.php">
               <span class="link-title">Dashboard</span>
               <i class="mdi mdi-gauge link-icon"></i>
             </a>
           </li>
           <li>
-            <a href="sections-list.html">
-              <span class="link-title">Section</span>
-              <i class="mdi mdi-book-open-variant link-icon"></i>
+            <a href="users-list.php">
+              <span class="link-title">Users</span>
+              <i class="mdi mdi-account-multiple link-icon"></i>
             </a>
           </li>
           <li>
-            <a href="assessments-list.html">
-              <span class="link-title">Assessments</span>
-              <i class="mdi mdi-clipboard link-icon"></i>
+            <a href="schools-list.php">
+              <span class="link-title">Schools</span>
+              <i class="mdi mdi-animation link-icon"></i>
             </a>
           </li>
           <li>
-            <a href="reports.html">
-              <span class="link-title">Reports</span>
-              <i class="mdi mdi-chart-areaspline link-icon"></i>
+            <a href="departments-list.php">
+              <span class="link-title">Departments</span>
+              <i class="mdi mdi-animation link-icon"></i>
             </a>
           </li>
           <li>
-            <a href="question-banks.html">
-              <span class="link-title">Question Bank</span>
-              <i class="mdi mdi-book-open-variant link-icon"></i>
+            <a href="programs-list.php">
+              <span class="link-title">Programs</span>
+              <i class="mdi mdi-clipboard-outline link-icon"></i>
             </a>
           </li>
           <li>
-            <a href="../login.html">
+            <a href="courses-list.php">
+              <span class="link-title">Courses</span>
+              <i class="mdi mdi-library-books link-icon"></i>
+            </a>
+          </li>
+          <li>
+            <a href="sections-list.php">
+              <span class="link-title">Sections</span>
+              <i class="mdi mdi-library-books link-icon"></i>
+            </a>
+          </li>
+          <li>
+            <a href="../php/login.php?logout=1">
               <span class="link-title">Logout</span>
               <i class="mdi mdi-logout link-icon"></i>
             </a>
@@ -99,18 +115,15 @@
                   <nav aria-label="breadcrumb">
                     <ol class="breadcrumb has-arrow">
                       <li class="breadcrumb-item">
-                        <a href="dashboard.html">Admin</a>
+                        <a href="dashboard.php">Admin</a>
                       </li>
-                      <li class="breadcrumb-item active" aria-current="page">Assessments</li>                      
+                      <li class="breadcrumb-item active" aria-current="page">Users</li>                      
                     </ol>
                   </nav>
                 </div>
               </div>
               <div class="col-3 py-5 text-right">
-                <a class="btn btn-warning has-icon mr-2" href="assessment-update.html">
-                  <i class="mdi mdi-lead-pencil"></i>Update
-                </a>
-                <a class="btn btn-success has-icon" href="assessment-create.html">
+                <a class="btn btn-success has-icon" href="user-create.php">
                   <i class="mdi mdi-account-plus-outline"></i>Add
                 </a>
               </div>
@@ -122,41 +135,55 @@
                     <table class="table display" id="user-table">
                       <thead>
                         <tr>
-                          <th>Semester</th>
-                          <th>Section</th>
-                          <th>Course Title</th>
-                          <th>Total Students</th>
-                          <th></th>
+                          <th>ID</th>
+                          <th>Full Name</th>
+                          <th>Email</th>
+                          <th>Depertment / Program</th>
+                          <th>User Type</th>
                         </tr>
                       </thead>
                       <tbody>
-                        <tr>
-                          <td>Summer-2020</td>
-                          <td>A</td>
-                          <td>Database Management</td>
-                          <td>42</td>
-                          <td class="actions">
-                            <i class="mdi mdi-dots-vertical"></i>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>Summer-2018</td>
-                          <td>B</td>
-                          <td>Object Oriented Programming with Java</td>
-                          <td>38</td>
-                          <td class="actions">
-                            <i class="mdi mdi-dots-vertical"></i>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>Fall-2019</td>
-                          <td>A</td>
-                          <td>Database Management</td>
-                          <td>50</td>
-                          <td class="actions">
-                            <i class="mdi mdi-dots-vertical"></i>
-                          </td>
-                        </tr>
+                        <?php
+                          foreach($admins as $admin){
+                            echo "
+                            <tr>
+                              <td>".$admin['id']."</td>
+                              <td class='d-flex align-items-center border-top-0'>
+                                <span>".$admin['name']."</span>
+                              </td>
+                              <td>".$admin['email']."</td>
+                              <td></td>
+                              <td>Admin</td>
+                            </tr>
+                            ";
+                          }
+                          foreach($faculties as $faculty){
+                            echo "
+                            <tr>
+                              <td>".$faculty['id']."</td>
+                              <td class='d-flex align-items-center border-top-0'>
+                                <span>".$faculty['name']."</span>
+                              </td>
+                              <td>".$faculty['email']."</td>
+                              <td>".$faculty['department']."</td>
+                              <td>Faculty</td>
+                            </tr>
+                            ";
+                          }
+                          foreach($students as $student){
+                            echo "
+                            <tr>
+                              <td>".$student['id']."</td>
+                              <td class='d-flex align-items-center border-top-0'>
+                                <span>".$student['name']."</span>
+                              </td>
+                              <td>".$student['email']."</td>
+                              <td>".$student['program']." in ".$student['department']."</td>
+                              <td>Student</td>
+                            </tr>
+                            ";
+                          }
+                        ?>
                       </tbody>
                     </table>
                   </div>
@@ -192,6 +219,8 @@
     <!-- endinject -->
     <!-- Vendor Js For This Page Ends-->
     <script src="../assets/vendors/apexcharts/apexcharts.min.js"></script>
+    <script src="../assets/vendors/chartjs/Chart.min.js"></script>
+    <script src="../assets/js/charts/chartjs.addon.js"></script>
     <script src="../assets/vendors/js/vendor.addons.js"></script>
     <script src="../assets/vendors/jquery/jquery-3.6.0.min.js"></script>
     <script src="../assets/vendors/datatables/jquery.dataTables.js"></script>

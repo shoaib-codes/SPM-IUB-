@@ -1,9 +1,12 @@
+<?php
+  include '../php/middleware.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Dean Dashboard</title>
+    <title>Admin Dashboard</title>
     <!-- plugins:css -->
     <link rel="stylesheet" href="../assets/vendors/iconfonts/mdi/css/materialdesignicons.css">
     <link rel="stylesheet" href="../assets/vendors/css/vendor.addons.css">
@@ -44,23 +47,7 @@
             <img class="profile-img img-lg rounded-circle" src="../assets/images/profile/male/image_1.png" alt="profile image">
           </div>
           <div class="info-wrapper">
-            <h4 class="user-name">Mr. Dean</h4>
-          </div>
-          <div class="row showcase_row_area mt-4">
-            <div class="col-md-4 text-right">
-              <label for="inputType14">Faculty</label>
-            </div>
-            <div class="col-md-4 showcase_content_area mb-2">
-              <div class="demo-wrapper">
-                <div class="custom-control custom-switch">
-                  <input type="checkbox" class="custom-control-input" id="role-switch" checked> 
-                  <label class="custom-control-label" for="role-switch"></label>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4 text-left">
-              <label for="inputType14">Dean</label>
-            </div>
+            <h4 class="user-name">Mr. Admin</h4>
           </div>
         </div>
         <ul class="navigation-menu">
@@ -72,13 +59,43 @@
             </a>
           </li>
           <li>
-            <a href="enrollment-comparison.html">
-              <span class="link-title">Enrollment Comparison</span>
-              <i class="mdi mdi-gauge link-icon"></i>
+            <a href="users-list.php">
+              <span class="link-title">Users</span>
+              <i class="mdi mdi-account-multiple link-icon"></i>
             </a>
           </li>
           <li>
-            <a href="../php/login.php?logout=1">
+            <a href="schools-list.php">
+              <span class="link-title">Schools</span>
+              <i class="mdi mdi-animation link-icon"></i>
+            </a>
+          </li>
+          <li>
+            <a href="departments-list.php">
+              <span class="link-title">Departments</span>
+              <i class="mdi mdi-animation link-icon"></i>
+            </a>
+          </li>
+          <li>
+            <a href="programs-list.php">
+              <span class="link-title">Programs</span>
+              <i class="mdi mdi-clipboard-outline link-icon"></i>
+            </a>
+          </li>
+          <li>
+            <a href="courses-list.php">
+              <span class="link-title">Courses</span>
+              <i class="mdi mdi-library-books link-icon"></i>
+            </a>
+          </li>
+          <li>
+            <a href="sections-list.php">
+              <span class="link-title">Sections</span>
+              <i class="mdi mdi-library-books link-icon"></i>
+            </a>
+          </li>
+          <li>
+            <a href="../login.php?logout=1">
               <span class="link-title">Logout</span>
               <i class="mdi mdi-logout link-icon"></i>
             </a>
@@ -96,7 +113,7 @@
                   <nav aria-label="breadcrumb">
                     <ol class="breadcrumb has-arrow">
                       <li class="breadcrumb-item">
-                        <a href="dashboard.php">Instructor</a>
+                        <a href="dashboard.php">Admin</a>
                       </li>
                       <li class="breadcrumb-item active" aria-current="page">Dashboard</li>                      
                     </ol>
@@ -113,7 +130,7 @@
                         <div class="d-flex justify-content-between">
                           <p class="card-title">128</p>
                         </div>
-                        <h5 class="text-black">Assessments</h5>
+                        <h5 class="text-black">Total Users</h5>
                       </div>
                       <div class="col-3">
                         <h1><i class="mdi mdi-account-multiple"></i></h1>
@@ -130,7 +147,7 @@
                         <div class="d-flex justify-content-between">
                           <p class="card-title">128</p>
                         </div>
-                        <h5 class="text-black">Total Batch</h5>
+                        <h5 class="text-black">Total Schools</h5>
                       </div>
                       <div class="col-3">
                         <h1><i class="mdi mdi-animation"></i></h1>
@@ -211,10 +228,5 @@
     <script src="../assets/js/template.js"></script>
     <script src="../assets/js/dashboard.js"></script>
     <!-- endbuild -->
-    <script>
-      $("#role-switch").change(function(){
-        window.location.href = "../faculty/dashboard.php";
-      });
-    </script>
   </body>
 </html>

@@ -1,9 +1,13 @@
+<?php
+  include '../php/middleware.php';
+  include '../php/f_assessment-create.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Update Assessment</title>
+    <title>Assessments List</title>
     <!-- plugins:css -->
     <link rel="stylesheet" href="../assets/vendors/iconfonts/mdi/css/materialdesignicons.css">
     <link rel="stylesheet" href="../assets/vendors/css/vendor.addons.css">
@@ -62,7 +66,7 @@
               <i class="mdi mdi-book-open-variant link-icon"></i>
             </a>
           </li>
-          <li class="active">
+          <li>
             <a href="assessments-list.php">
               <span class="link-title">Assessments</span>
               <i class="mdi mdi-clipboard link-icon"></i>
@@ -93,109 +97,58 @@
         <div class="page-content-wrapper-inner">
           <div class="content-viewport">
             <div class="row">
-              <div class="col-12 py-5">
-                <h4>Upadte Assessment</h4>
+              <div class="col-9 py-5">
+                <h4>Dashboard</h4>
                 <div class="viewport-header">
                   <nav aria-label="breadcrumb">
                     <ol class="breadcrumb has-arrow">
                       <li class="breadcrumb-item">
                         <a href="dashboard.php">Admin</a>
                       </li>
-                      <li class="breadcrumb-item">
-                        <a href="assessments-list.php">Assessments</a>
-                      </li>
-                      <li class="breadcrumb-item active" aria-current="page">Update Assessment</li>                      
+                      <li class="breadcrumb-item active" aria-current="page">Assessments</li>                      
                     </ol>
                   </nav>
                 </div>
               </div>
+              <div class="col-3 py-5 text-right">
+                <a class="btn btn-warning has-icon mr-2" href="assessment-update.html">
+                  <i class="mdi mdi-lead-pencil"></i>Update
+                </a>
+                <a class="btn btn-success has-icon" href="assessment-create.php">
+                  <i class="mdi mdi-account-plus-outline"></i>Add
+                </a>
+              </div>
             </div>
             <div class="col-lg-12">
               <div class="grid">
-                <div class="grid-body">
-                  <div class="item-wrapper">
-                    <div class="row mb-3">
-                      <div class="col-md-8 mx-auto">
-                        <div class="form-group row showcase_row_area">
-                          <div class="col-md-3 showcase_text_area">
-                            <label for="user_id">Semester</label>
-                          </div>
-                          <div class="col-md-9 showcase_content_area">
-                            <input type="text" class="form-control" id="user_id" name="user_id" placeholder="Enter Semester">
-                          </div>
-                        </div>
-                        <div class="form-group row showcase_row_area">
-                          <div class="col-md-3 showcase_text_area">
-                            <label for="f_name">Section</label>
-                          </div>
-                          <div class="col-md-9 showcase_content_area">
-                            <input type="text" class="form-control" id="f_name" name="f_name" placeholder="Enter Section">
-                          </div>
-                        </div>
-                        <div class="form-group row showcase_row_area">
-                          <div class="col-md-3 showcase_text_area">
-                            <label for="f_name">Course Id</label>
-                          </div>
-                          <div class="col-md-9 showcase_content_area">
-                            <input type="text" class="form-control" id="f_name" name="f_name" placeholder="Enter Course Id">
-                          </div>
-                        </div>
-                        <div class="form-group row showcase_row_area">
-                          <div class="col-md-3 showcase_text_area">
-                            <label>Assessment Type</label>
-                          </div>
-                          <div class="col-md-9 showcase_content_area">
-                            <select class="custom-select">
-                              <option value="Student" selected>Mid-term</option>
-                              <option value="Instructor">Final</option>
-                              <option value="HigherAuthority">Lab</option>
-                              <option value="Admin">Tutorial</option>
-                            </select>
-                          </div>
-                        </div>
-                        <div class="form-group row showcase_row_area">
-                          <div class="col-md-3 showcase_text_area">
-                            <label for="f_name">Student Id</label>
-                          </div>
-                          <div class="col-md-9 showcase_content_area">
-                            <input type="text" class="form-control" id="f_name" name="f_name" placeholder="Enter Student Id">
-                          </div>
-                        </div>
-                        <div class="form-group row showcase_row_area">
-                          <div class="col-md-3 showcase_text_area">
-                            <label for="f_name">Question Number</label>
-                          </div>
-                          <div class="col-md-9 showcase_content_area">
-                            <input type="text" class="form-control" id="f_name" name="f_name" placeholder="Enter Question Number">
-                          </div>
-                        </div>
-                        <div class="form-group row showcase_row_area">
-                          <div class="col-md-3 showcase_text_area">
-                            <label for="f_name">Assigned CO</label>
-                          </div>
-                          <div class="col-md-9 showcase_content_area">
-                            <input type="text" class="form-control" id="f_name" name="f_name" placeholder="Enter Assigned Co">
-                          </div>
-                        </div>
-                        <div class="form-group row showcase_row_area">
-                          <div class="col-md-3 showcase_text_area">
-                            <label for="f_name">Achieved Mark</label>
-                          </div>
-                          <div class="col-md-9 showcase_content_area">
-                            <input type="text" class="form-control" id="f_name" name="f_name" placeholder="Enter Achieved Mark">
-                          </div>
-                        </div>
-                        <div class="form-group row showcase_row_area">
-                          <div class="col-md-3 showcase_text_area">
-                            <label for="f_name">Question Mark</label>
-                          </div>
-                          <div class="col-md-9 showcase_content_area">
-                            <input type="text" class="form-control" id="f_name" name="f_name" placeholder="Enter Question Mark">
-                          </div>
-                        </div>
-                        <input type="submit" class="btn btn-primary" value="Submit">
-                      </div>
-                    </div>
+                <div class="item-wrapper">
+                  <div class="table-responsive">
+                    <table class="table display" id="user-table">
+                      <thead>
+                        <tr>
+                          <th>Semester</th>
+                          <th>Section</th>
+                          <th>Course Id</th>
+                          <th>Type</th>
+                          <th>Total Questions</th>
+                          <th>Total Students</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <?php
+                          foreach($asmnts as $asmnt){
+                            echo "<tr>
+                                    <td>".$asmnt['semester']."</td>
+                                    <td>".$asmnt['section']."</td>
+                                    <td>".strtoupper($asmnt['course_id'])."</td>
+                                    <td>".$asmnt['type']."</td>
+                                    <td>".$asmnt['total_q']."</td>
+                                    <td>".$asmnt['total_students']."</td>
+                                  </tr>";
+                          }
+                        ?>
+                      </tbody>
+                    </table>
                   </div>
                 </div>
               </div>

@@ -1,5 +1,6 @@
 <?php
     include '../php/middleware.php';
+    include '../php/f_dashboard.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -49,22 +50,43 @@
           <div class="info-wrapper">
             <h4 class="user-name">Mr. Faculty</h4>
           </div>
-          <div class="row showcase_row_area mt-4">
-            <div class="col-md-4 text-right">
-              <label for="inputType14">Faculty</label>
-            </div>
-            <div class="col-md-4 showcase_content_area mb-2">
-              <div class="demo-wrapper">
-                <div class="custom-control custom-switch">
-                  <input type="checkbox" class="custom-control-input" id="role-switch"> 
-                  <label class="custom-control-label" for="role-switch"></label>
+          <?php
+            if($_SESSION['role']==6){
+              echo '<div class="row showcase_row_area mt-4">
+              <div class="col-md-4 text-right">
+                <label for="inputType14">Faculty</label>
+              </div>
+              <div class="col-md-4 showcase_content_area mb-2">
+                <div class="demo-wrapper">
+                  <div class="custom-control custom-switch">
+                    <input type="checkbox" class="custom-control-input" id="role-switch1"> 
+                    <label class="custom-control-label" for="role-switch1"></label>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="col-md-4 text-left">
-              <label for="inputType14">Dean</label>
-            </div>
-          </div>
+              <div class="col-md-4 text-left">
+                <label for="inputType14">Dean</label>
+              </div>
+            </div>';
+            }else if($_SESSION['role']==4){
+              echo '<div class="row showcase_row_area mt-4">
+              <div class="col-md-4 text-right">
+                <label for="inputType14">Faculty</label>
+              </div>
+              <div class="col-md-4 showcase_content_area mb-2">
+                <div class="demo-wrapper">
+                  <div class="custom-control custom-switch">
+                    <input type="checkbox" class="custom-control-input" id="role-switch2"> 
+                    <label class="custom-control-label" for="role-switch2"></label>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 text-left">
+                <label for="inputType14">Head</label>
+              </div>
+            </div>';
+            }
+          ?>          
         </div>
         <ul class="navigation-menu">
           <li class="nav-category-divider">MAIN</li>
@@ -126,13 +148,13 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-md-3 col-sm-6 col-6 equel-grid">
+              <div class="col-md-4 col-sm-4 col-4 equel-grid">
                 <div class="grid">
                   <div class="grid-body text-gray">
                     <div class="row">
                       <div class="col-9">
                         <div class="d-flex justify-content-between">
-                          <p class="card-title">128</p>
+                          <p class="card-title"><?php echo $asmnts; ?></p>
                         </div>
                         <h5 class="text-black">Assessments</h5>
                       </div>
@@ -143,15 +165,15 @@
                   </div>
                 </div>
               </div>
-              <div class="col-md-3 col-sm-6 col-6 equel-grid">
+              <div class="col-md-4 col-sm-4 col-4 equel-grid">
                 <div class="grid">
                   <div class="grid-body text-gray">
                     <div class="row">
                       <div class="col-9">
                         <div class="d-flex justify-content-between">
-                          <p class="card-title">128</p>
+                          <p class="card-title"><?php echo $sctns; ?></p>
                         </div>
-                        <h5 class="text-black">Total Batch</h5>
+                        <h5 class="text-black">Total Section</h5>
                       </div>
                       <div class="col-3">
                         <h1><i class="mdi mdi-animation"></i></h1>
@@ -160,30 +182,13 @@
                   </div>
                 </div>
               </div>
-              <div class="col-md-3 col-sm-6 col-6 equel-grid">
+              <div class="col-md-4 col-sm-4 col-4 equel-grid">
                 <div class="grid">
                   <div class="grid-body text-gray">
                     <div class="row">
                       <div class="col-9">
                         <div class="d-flex justify-content-between">
-                          <p class="card-title">128</p>
-                        </div>
-                        <h5 class="text-black">Total Programs</h5>
-                      </div>
-                      <div class="col-3">
-                        <h1><i class="mdi mdi-clipboard-outline"></i></h1>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-3 col-sm-6 col-6 equel-grid">
-                <div class="grid">
-                  <div class="grid-body text-gray">
-                    <div class="row">
-                      <div class="col-9">
-                        <div class="d-flex justify-content-between">
-                          <p class="card-title">128</p>
+                          <p class="card-title"><?php echo $crss; ?></p>
                         </div>
                         <h5 class="text-black">Total Courses</h5>
                       </div>
@@ -195,6 +200,36 @@
                 </div>
               </div>
             </div>
+            <div class="row d-flex justify-content-center mt-5">
+            <div class="col-6" <?php if(isset($_GET['semester'])){echo "hidden";} ?>>
+              <div class="grid">
+                <div class="grid-body">
+                  <div class="item-wrapper">
+                    <form method="GET">
+                      <div class="form-group input-rounded">
+                        <input type="text" class="form-control" placeholder="Semester" spellcheck="false" data-ms-editor="true" name="semester">
+                      </div>
+                      <div class="text-center">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row" <?php if(!isset($_GET['semester'])){echo "hidden";} ?>>
+            <div class="col-md-12">
+              <div class="grid">
+                <div class="grid-body">
+                  <h2 class="grid-title">Course Wise Performance Trend</h2>
+                  <div class="item-wrapper">
+                    <canvas id="course-trend" height="100"></canvas>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
           </div>
         </div>
         <!-- content viewport ends -->
@@ -231,11 +266,65 @@
     <!-- build:js -->
     <script src="../assets/js/template.js"></script>
     <script src="../assets/js/dashboard.js"></script>
+    <script src="../assets/js/coolors.js"></script>
     <!-- endbuild -->
     <script>
-      $("#role-switch").change(function(){
+      $("#role-switch1").change(function(){
         window.location.href = "../dean/dashboard.php";
       });
+      $("#role-switch2").change(function(){
+        window.location.href = "../head/dashboard.php";
+      });
+
+      var ctx = $('#course-trend');
+      var myChart = new Chart(ctx, {
+          type: 'bar',
+          data: {
+              labels: [
+                <?php
+                  if(sizeof($course)!=0){
+                    foreach($course as $k => $v){
+                      echo "'$k', ";
+                    }
+                  }                  
+                ?>
+              ],
+              datasets: [{
+                  label: '# of Enrolled Students',
+                  data: [
+                    <?php
+                      if(sizeof($course)!=0){
+                        foreach($course as $k => $v){
+                          echo "$v, ";
+                        }
+                      }                  
+                    ?>
+                  ],
+                  backgroundColor: [
+                    <?php
+                      $indx = 0;
+                      if(sizeof($course)!=0){
+                        foreach($course as $k => $v){
+                          echo "colors[".$indx."], ";
+                          $indx++;
+                        }
+                      }                  
+                    ?>
+                  ]
+              }]
+          },
+          options: {
+              scales: {
+                  y: {
+                      beginAtZero: true
+                  }
+              }
+          }
+      });
+
     </script>
+
+
+
   </body>
 </html>

@@ -2,15 +2,9 @@
     include 'mysql.php';
 
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-        $semester = $_POST['semester'];
-        $section = $_POST['section'];
-        $course_id = $_POST['course_id'];
+        $section_id = $_POST['section_id'];
         $type = strtolower($_POST['type']);
         $total_q = $_POST['total_q'];
-
-
-        $query = "SELECT id from section WHERE LOWER(semester) = LOWER('$semester') AND LOWER(num) = LOWER('$section') AND LOWER(course_id) = LOWER('$course_id')";      
-        $section_id = $conn->query($query)->fetch_assoc()['id'];
 
         $query = "SELECT * FROM assessment WHERE type = '$type' AND section_id = $section_id";
         if($conn->query($query)->num_rows==0){
@@ -40,15 +34,9 @@
                             VALUES($i, '$type', $mark, $co, $section_id)";
                 }
                 
-                echo $query . '<br/>';
                 $conn->query($query);  
-                echo $conn->error;
-                echo '<br>';
             }
         }
-
-        echo '<br>';
-        echo '<br>';
 
         $file = fopen($_FILES['evaluation']['tmp_name'], "r");   
 
@@ -65,20 +53,22 @@
                 $query = "INSERT INTO evaluation (enrollment_id, assessment_id, obtained_mark)
                             VALUES($enrollment_id, $assessment_id, $mark)";
                 
-                echo $query . '<br/>';
                 $conn->query($query);  
-                echo $conn->error;
-                echo '<br>';
             }
         }
         
         header("Location: assessments-list.php");
         
    }else{
+
+        $query = "SELECT * FROM  section WHERE faculty_id = " . $_SESSION['user'];
+        $sctns = $conn->query($query);
+
         $query = "SELECT section.semester as 'semester', section.num as 'section', section.course_id as 'course_id', assessment.type as 'type',
-        COUNT(assessment.id) as 'total_q', COUNT(DISTINCT(evaluation.enrollment_id)) as 'total_students'
+        COUNT(DISTINCT(assessment.id)) as 'total_q', COUNT(DISTINCT(evaluation.enrollment_id)) as 'total_students'
         FROM assessment LEFT JOIN section ON assessment.section_id = section.id
         LEFT JOIN evaluation ON assessment.id = evaluation.assessment_id
+        WHERE section.faculty_id = ".$_SESSION['user']."
         GROUP BY assessment.section_id, assessment.type";
 
         $asmnts = $conn->query($query);

@@ -1,6 +1,8 @@
 # SPM-IUB (Group 4)
 Here we store the codes/reports for the SPMS software done by me and 5 other members from IUB.
+
 System Requirements
+
 In a university a student gets admitted under a specific Degree Program. Each program
 belongs to a department and the related departments are kept under schools. Courses
 are taught by instructors, departments are run by department heads and schools are run
@@ -9,6 +11,7 @@ departments of IUB for this purpose. Please find out the information that is rel
 the degree programs as well. Also identify the student information needed for
 monitoring their performances and the information you may need to keep track of for
 the students themselves.
+
 Students enroll in a certain program under a department which falls under a certain
 school. Students usually take courses as per the curriculum of their respective programs.
 You should explore the data regarding student enrollment.
@@ -18,10 +21,12 @@ the courses contribute to the cumulative grade point average of a student and th
 point average at the end of each semester based on the courses taken in that semester.
 Courses may be retaken by students if they wish to improve their grade. You should
 explore the grading procedure and its relevant data.
+
 Each program consists of many courses. There are different categories of the courses
 (e.g., foundation, major, minor). Students are required to complete the courses
 associated with the programs to fulfil the requirement of the degree. Please find out the
 related information regarding courses and categories.
+
 Under the OBE model for each program there will be a set of program learning
 outcomes (PLO). To fulfil the requirement of a degree program a student must achieve
 the PLOs associated with that program. To evaluate the students in each course, there

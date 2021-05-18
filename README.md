@@ -50,33 +50,43 @@ build a system that enables users to monitor student performance and analyse rel
 metrics. Please note that input forms should be available to enter the data required to
 generate any output report. System should be implemented first using dummy data and
 then tested on sample data.
+
 ● School-wise, department-wise and program-wise student enrollment comparison.
 For example, a graph showing how many students have enrolled in each
 department with respect to a given period of time/semesters.
+
 ● School-wise, department-wise and program-wise student performance trends
 based on CGPA with respect to a given period of time/semesters.
+
 ● Course-wise (for a selection of courses) student performance trend based on GPA
 with respect to a given period of time/semesters.
+
 ● Instructor-wise (for a selection of instructors) student performance trend based
 on the GPA of the students in the courses taught by each of the instructors so far
 with respect to a given period of time/semesters.
+
 ● VC-wise,dean-wise, or head-wise student performance trend based on the GPA of
 the students under the school/program corresponding to the leadership team.
+
 ● Instructor-wise student performance trend for a chosen course with respect to a
 given period of time/semesters.
+
 ● PLO total percentage score for each PLO calculated from the scores achieved in
 each CO associated with the corresponding PLO among all the courses the
 student has done so far, along with the departmental average performance for
 comparison. Also, for each PLO, what percentage of it was achieved from each of
 the courses associated with the corresponding PLO, and what percentage was
-
 achieved via each of all the COs associated with the corresponding PLO. All of this
 for a chosen school, program, or department.
+
 ● PLO achievement of a student for each of the courses taken so far.
+
 ● Comparison of PLO-achieved percentage versus PLO-attempted percentage
+
 ● Comparison of a course’s, student’s, department’s, program’s, or school’s
 expected PLO-achievement versus actual with respect to a given period of
 time/semesters.
+
 ● Summary of CO-PLO achievement stats for a chosen course, program,
 department, school.
 

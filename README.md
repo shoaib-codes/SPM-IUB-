@@ -95,5 +95,11 @@ time/semesters.
 ● Summary of CO-PLO achievement stats for a chosen course, program,
 department, school.
 
-
+Commited by:
+=>Abu Musa Sakib
+=>Abdullah Al Akib
+=>Farhana afruz
+=>Md Rubaut Reshed Chowdhury
+=>Mohammad Shoaib
+=>Sumyia Afnan Mukta
 

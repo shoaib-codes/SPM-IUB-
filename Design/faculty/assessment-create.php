@@ -121,28 +121,19 @@
                     <form enctype='multipart/form-data' id="asev-form" method="POST">
                       <div class="row mb-3" id="part1">
                         <div class="col-md-8 mx-auto">
+
                           <div class="form-group row showcase_row_area">
                             <div class="col-md-3 showcase_text_area">
-                              <label for="semester">Semester</label>
+                              <label>Section</label>
                             </div>
                             <div class="col-md-9 showcase_content_area">
-                              <input type="text" class="form-control" id="semester" name="semester" placeholder="Enter Semester">
-                            </div>
-                          </div>
-                          <div class="form-group row showcase_row_area">
-                            <div class="col-md-3 showcase_text_area">
-                              <label for="section">Section</label>
-                            </div>
-                            <div class="col-md-9 showcase_content_area">
-                              <input type="text" class="form-control" id="section" name="section" placeholder="Enter Section">
-                            </div>
-                          </div>
-                          <div class="form-group row showcase_row_area">
-                            <div class="col-md-3 showcase_text_area">
-                              <label for="course_id">Course Id</label>
-                            </div>
-                            <div class="col-md-9 showcase_content_area">
-                              <input type="text" class="form-control" id="course_id" name="course_id" placeholder="Enter Course Id">
+                              <select class="custom-select" name="section_id">
+                                <?php
+                                  foreach($sctns as $sctn){
+                                    echo "<option value='".$sctn['id']."'>".$sctn['num']." - ".strtoupper($sctn['course_id'])." - ".$sctn['semester']."</option>";
+                                  }
+                                ?>
+                              </select>
                             </div>
                           </div>
                           <div class="form-group row showcase_row_area">

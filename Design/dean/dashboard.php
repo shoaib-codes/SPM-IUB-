@@ -1,3 +1,7 @@
+<?php
+    include '../php/middleware.php';
+    include '../php/d_dashboard.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -45,6 +49,10 @@
           </div>
           <div class="info-wrapper">
             <h4 class="user-name">Mr. Dean</h4>
+            <?php
+              echo "<small class='text-center mt-3'>$school_name</small>"
+            ?>
+            
           </div>
           <div class="row showcase_row_area mt-4">
             <div class="col-md-4 text-right">
@@ -65,15 +73,27 @@
         </div>
         <ul class="navigation-menu">
           <li class="nav-category-divider">MAIN</li>
-          <li>
+          <li class="active">
             <a href="dashboard.php">
               <span class="link-title">Dashboard</span>
               <i class="mdi mdi-gauge link-icon"></i>
             </a>
           </li>
           <li>
-            <a href="enrollment-comparison.html">
+            <a href="enrollment-comparison.php">
               <span class="link-title">Enrollment Comparison</span>
+              <i class="mdi mdi-gauge link-icon"></i>
+            </a>
+          </li>
+          <li>
+            <a href="plo-comparison.php">
+              <span class="link-title">PLO Comparison</span>
+              <i class="mdi mdi-gauge link-icon"></i>
+            </a>
+          </li>
+          <li>
+            <a href="student-peformance.php">
+              <span class="link-title">Student Peformace</span>
               <i class="mdi mdi-gauge link-icon"></i>
             </a>
           </li>
@@ -96,7 +116,7 @@
                   <nav aria-label="breadcrumb">
                     <ol class="breadcrumb has-arrow">
                       <li class="breadcrumb-item">
-                        <a href="dashboard.php">Instructor</a>
+                        <a href="dashboard.php">Dean</a>
                       </li>
                       <li class="breadcrumb-item active" aria-current="page">Dashboard</li>                      
                     </ol>
@@ -105,15 +125,15 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-md-3 col-sm-6 col-6 equel-grid">
+              <div class="col-md-4 col-4 equel-grid">
                 <div class="grid">
                   <div class="grid-body text-gray">
                     <div class="row">
                       <div class="col-9">
                         <div class="d-flex justify-content-between">
-                          <p class="card-title">128</p>
+                          <p class="card-title"><?php echo $enrolled; ?></p>
                         </div>
-                        <h5 class="text-black">Assessments</h5>
+                        <h5 class="text-black">Enrolled Student</h5>
                       </div>
                       <div class="col-3">
                         <h1><i class="mdi mdi-account-multiple"></i></h1>
@@ -122,15 +142,15 @@
                   </div>
                 </div>
               </div>
-              <div class="col-md-3 col-sm-6 col-6 equel-grid">
+              <div class="col-md-4 col-4 equel-grid">
                 <div class="grid">
                   <div class="grid-body text-gray">
                     <div class="row">
                       <div class="col-9">
                         <div class="d-flex justify-content-between">
-                          <p class="card-title">128</p>
+                          <p class="card-title"><?php echo $prog_count; ?></p>
                         </div>
-                        <h5 class="text-black">Total Batch</h5>
+                        <h5 class="text-black">Total Program</h5>
                       </div>
                       <div class="col-3">
                         <h1><i class="mdi mdi-animation"></i></h1>
@@ -139,35 +159,18 @@
                   </div>
                 </div>
               </div>
-              <div class="col-md-3 col-sm-6 col-6 equel-grid">
+              <div class="col-md-4 col-4 equel-grid">
                 <div class="grid">
                   <div class="grid-body text-gray">
                     <div class="row">
                       <div class="col-9">
                         <div class="d-flex justify-content-between">
-                          <p class="card-title">128</p>
-                        </div>
-                        <h5 class="text-black">Total Programs</h5>
-                      </div>
-                      <div class="col-3">
-                        <h1><i class="mdi mdi-clipboard-outline"></i></h1>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-3 col-sm-6 col-6 equel-grid">
-                <div class="grid">
-                  <div class="grid-body text-gray">
-                    <div class="row">
-                      <div class="col-9">
-                        <div class="d-flex justify-content-between">
-                          <p class="card-title">128</p>
+                          <p class="card-title"><?php echo $crs_count; ?></p>
                         </div>
                         <h5 class="text-black">Total Courses</h5>
                       </div>
                       <div class="col-3">
-                        <h1><i class="mdi mdi-library-books"></i></h1>
+                        <h1><i class="mdi mdi-clipboard-outline"></i></h1>
                       </div>
                     </div>
                   </div>

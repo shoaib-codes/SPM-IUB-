@@ -17,9 +17,16 @@
                     WHERE id = ANY(SELECT school_id FROM department 
                     WHERE id = ANY( SELECT department_id from program 
                     WHERE id = ANY(SELECT program_id FROM student WHERE id = $id)))"; 
+                $_SESSION['id'] = $id;
                 $_SESSION['uni'] = $conn->query($query)->fetch_row()[0];
                 $_SESSION['role'] = 1;
                 $_SESSION['user'] = $id;
+
+                $query = "SELECT id FROM department 
+                WHERE id = ANY( SELECT department_id from program 
+                WHERE id = ANY(SELECT program_id FROM student WHERE id = $id))";
+
+                $_SESSION['dep'] = $conn->query($query)->fetch_row()[0];
             }
         }
         
@@ -33,9 +40,13 @@
                 WHERE id = ANY(SELECT school_id FROM department 
                 WHERE id = ANY( SELECT department_id from faculty WHERE id = $id))"; 
 
+                $_SESSION['id'] = $id;
                 $_SESSION['uni'] = $conn->query($query)->fetch_row()[0];
                 $_SESSION['user'] = $id;
                 $_SESSION['role'] = 2;
+
+                $query = "SELECT department_id FROM faculty WHERE id = $id";
+                $_SESSION['dep'] = $conn->query($query)->fetch_row()[0];
 
                 $name = $user['name'];
 
@@ -62,6 +73,7 @@
                 $flag = 3;
                 $id = $user['id'];
                 $query = "SELECT university_id FROM admin WHERE id = $id"; 
+                $_SESSION['id'] = $id;
                 $_SESSION['uni'] = $conn->query($query)->fetch_row()[0];
                 $_SESSION['role'] = 3;
                 $_SESSION['user'] = $id;
@@ -70,6 +82,7 @@
 
         if($flag==0){
             session_unset();
+            header("Location: ../login.php");
         }
 
 

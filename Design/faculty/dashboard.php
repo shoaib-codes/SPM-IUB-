@@ -50,43 +50,28 @@
           <div class="info-wrapper">
             <h4 class="user-name">Mr. Faculty</h4>
           </div>
-          <?php
-            if($_SESSION['role']==6){
-              echo '<div class="row showcase_row_area mt-4">
+            <div class="row showcase_row_area mt-4" <?php if(!($_SESSION['role']==6 || $_SESSION['role']==4)){ echo 'hidden'; } ?>>
               <div class="col-md-4 text-right">
                 <label for="inputType14">Faculty</label>
               </div>
               <div class="col-md-4 showcase_content_area mb-2">
                 <div class="demo-wrapper">
                   <div class="custom-control custom-switch">
-                    <input type="checkbox" class="custom-control-input" id="role-switch1"> 
+                    <input type="checkbox" class="custom-control-input" id="role-switch1" onchange="roleChange('<?php echo $_SESSION['role'] ?>')"> 
                     <label class="custom-control-label" for="role-switch1"></label>
                   </div>
                 </div>
               </div>
               <div class="col-md-4 text-left">
-                <label for="inputType14">Dean</label>
+                <?php
+                  if($_SESSION['role']==6){
+                    echo '<label for="inputType14">Dean</label>';
+                  }else if($_SESSION['role']==4){
+                    echo '<label for="inputType14">Head</label>';
+                  }
+                ?>
               </div>
-            </div>';
-            }else if($_SESSION['role']==4){
-              echo '<div class="row showcase_row_area mt-4">
-              <div class="col-md-4 text-right">
-                <label for="inputType14">Faculty</label>
-              </div>
-              <div class="col-md-4 showcase_content_area mb-2">
-                <div class="demo-wrapper">
-                  <div class="custom-control custom-switch">
-                    <input type="checkbox" class="custom-control-input" id="role-switch2"> 
-                    <label class="custom-control-label" for="role-switch2"></label>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-4 text-left">
-                <label for="inputType14">Head</label>
-              </div>
-            </div>';
-            }
-          ?>          
+            </div>        
         </div>
         <ul class="navigation-menu">
           <li class="nav-category-divider">MAIN</li>
@@ -256,6 +241,7 @@
     <!-- SCRIPT LOADING START FORM HERE /////////////-->
     <!-- plugins:js -->
     <script src="../assets/vendors/js/core.js"></script>
+    <script src="../assets/vendors/jquery/jquery-3.6.0.min.js"></script>
     <!-- endinject -->
     <!-- Vendor Js For This Page Ends-->
     <script src="../assets/vendors/apexcharts/apexcharts.min.js"></script>
@@ -268,14 +254,18 @@
     <script src="../assets/js/dashboard.js"></script>
     <script src="../assets/js/coolors.js"></script>
     <!-- endbuild -->
-    <script>
-      $("#role-switch1").change(function(){
-        window.location.href = "../dean/dashboard.php";
-      });
-      $("#role-switch2").change(function(){
-        window.location.href = "../head/dashboard.php";
-      });
 
+    <script>
+      function roleChange($r){
+        if($r==6){
+          window.location.href = "../dean/";
+        }else{
+          window.location.href = "../faculty/dashboard.php";
+        }
+      }
+    </script>
+
+    <script>
       var ctx = $('#course-trend');
       var myChart = new Chart(ctx, {
           type: 'bar',
@@ -323,8 +313,6 @@
       });
 
     </script>
-
-
 
   </body>
 </html>

@@ -7,7 +7,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Instructor Dashboard</title>
+    <title>Dashboard | Faculty</title>
     <!-- plugins:css -->
     <link rel="stylesheet" href="../assets/vendors/iconfonts/mdi/css/materialdesignicons.css">
     <link rel="stylesheet" href="../assets/vendors/css/vendor.addons.css">
@@ -48,7 +48,7 @@
             <img class="profile-img img-lg rounded-circle" src="../assets/images/profile/male/image_1.png" alt="profile image">
           </div>
           <div class="info-wrapper">
-            <h4 class="user-name">Mr. Faculty</h4>
+            <h4 class="user-name"><?php echo $_SESSION["name"]; ?></h4>
           </div>
             <div class="row showcase_row_area mt-4" <?php if(!($_SESSION['role']==6 || $_SESSION['role']==4)){ echo 'hidden'; } ?>>
               <div class="col-md-4 text-right">
@@ -75,7 +75,7 @@
         </div>
         <ul class="navigation-menu">
           <li class="nav-category-divider">MAIN</li>
-          <li>
+          <li class="active">
             <a href="dashboard.php">
               <span class="link-title">Dashboard</span>
               <i class="mdi mdi-gauge link-icon"></i>
@@ -93,12 +93,12 @@
               <i class="mdi mdi-clipboard link-icon"></i>
             </a>
           </li>
-          <li>
+          <!-- <li>
             <a href="reports.html">
               <span class="link-title">Reports</span>
               <i class="mdi mdi-chart-areaspline link-icon"></i>
             </a>
-          </li>
+          </li> -->
           <li>
             <a href="question-banks.php">
               <span class="link-title">Question Bank</span>
@@ -124,7 +124,7 @@
                   <nav aria-label="breadcrumb">
                     <ol class="breadcrumb has-arrow">
                       <li class="breadcrumb-item">
-                        <a href="dashboard.php">Instructor</a>
+                        <a href="dashboard.php">Faculty</a>
                       </li>
                       <li class="breadcrumb-item active" aria-current="page">Dashboard</li>                      
                     </ol>
@@ -186,35 +186,35 @@
               </div>
             </div>
             <div class="row d-flex justify-content-center mt-5">
-            <div class="col-6" <?php if(isset($_GET['semester'])){echo "hidden";} ?>>
-              <div class="grid">
-                <div class="grid-body">
-                  <div class="item-wrapper">
-                    <form method="GET">
-                      <div class="form-group input-rounded">
-                        <input type="text" class="form-control" placeholder="Semester" spellcheck="false" data-ms-editor="true" name="semester">
-                      </div>
-                      <div class="text-center">
-                        <button type="submit" class="btn btn-primary">Submit</button>
-                      </div>
-                    </form>
+              <div class="col-6" <?php if(isset($_GET['semester'])){echo "hidden";} ?>>
+                <div class="grid">
+                  <div class="grid-body">
+                    <div class="item-wrapper">
+                      <form method="GET">
+                        <div class="form-group input-rounded">
+                          <input type="text" class="form-control" placeholder="Semester" spellcheck="false" data-ms-editor="true" name="semester">
+                        </div>
+                        <div class="text-center">
+                          <button type="submit" class="btn btn-primary">Submit</button>
+                        </div>
+                      </form>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="row" <?php if(!isset($_GET['semester'])){echo "hidden";} ?>>
-            <div class="col-md-12">
-              <div class="grid">
-                <div class="grid-body">
-                  <h2 class="grid-title">Course Wise Performance Trend</h2>
-                  <div class="item-wrapper">
-                    <canvas id="course-trend" height="100"></canvas>
+            <div class="row" <?php if(!isset($_GET['semester'])){echo "hidden";} ?>>
+              <div class="col-md-12">
+                <div class="grid">
+                  <div class="grid-body">
+                    <h2 class="grid-title">Course Wise Performance Trend</h2>
+                    <div class="item-wrapper">
+                      <canvas id="course-trend" height="100"></canvas>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
           </div>
         </div>
         <!-- content viewport ends -->
@@ -260,7 +260,7 @@
         if($r==6){
           window.location.href = "../dean/";
         }else{
-          window.location.href = "../faculty/dashboard.php";
+          window.location.href = "../head/";
         }
       }
     </script>
@@ -280,7 +280,7 @@
                 ?>
               ],
               datasets: [{
-                  label: '# of Enrolled Students',
+                  label: 'Performance Trend',
                   data: [
                     <?php
                       if(sizeof($course)!=0){

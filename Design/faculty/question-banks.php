@@ -7,7 +7,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Question Bank</title>
+    <title>Question Bank | Faculty</title>
     <!-- plugins:css -->
     <link rel="stylesheet" href="../assets/vendors/iconfonts/mdi/css/materialdesignicons.css">
     <link rel="stylesheet" href="../assets/vendors/css/vendor.addons.css">
@@ -72,12 +72,12 @@
               <i class="mdi mdi-clipboard link-icon"></i>
             </a>
           </li>
-          <li>
+          <!--
             <a href="reports.html">
               <span class="link-title">Reports</span>
               <i class="mdi mdi-chart-areaspline link-icon"></i>
             </a>
-          </li>
+          </!-->
           <li class="active">
             <a href="question-banks.php">
               <span class="link-title">Question Bank</span>
@@ -98,14 +98,14 @@
           <div class="content-viewport">
             <div class="row">
               <div class="col-9 py-5">
-                <h4>Question Banks</h4>
+                <h4>Question Bank</h4>
                 <div class="viewport-header">
                   <nav aria-label="breadcrumb">
                     <ol class="breadcrumb has-arrow">
                       <li class="breadcrumb-item">
-                        <a href="dashboard.php">Instructor</a>
+                        <a href="dashboard.php">Faculty</a>
                       </li>
-                      <li class="breadcrumb-item active" aria-current="page">Question Banks</li>                      
+                      <li class="breadcrumb-item active" aria-current="page">Question Bank</li>                      
                     </ol>
                   </nav>
                 </div>

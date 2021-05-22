@@ -1,12 +1,14 @@
 <?php
   include '../php/middleware.php';
+  include '../php/admin.php';
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Admin Dashboard</title>
+    <title>Dashboard | Admin</title>
     <!-- plugins:css -->
     <link rel="stylesheet" href="../assets/vendors/iconfonts/mdi/css/materialdesignicons.css">
     <link rel="stylesheet" href="../assets/vendors/css/vendor.addons.css">
@@ -47,12 +49,12 @@
             <img class="profile-img img-lg rounded-circle" src="../assets/images/profile/male/image_1.png" alt="profile image">
           </div>
           <div class="info-wrapper">
-            <h4 class="user-name">Mr. Admin</h4>
+            <h4 class="user-name"><?php echo $_SESSION["name"]; ?></h4>
           </div>
         </div>
         <ul class="navigation-menu">
           <li class="nav-category-divider">MAIN</li>
-          <li>
+          <li class="active">
             <a href="dashboard.php">
               <span class="link-title">Dashboard</span>
               <i class="mdi mdi-gauge link-icon"></i>
@@ -73,7 +75,7 @@
           <li>
             <a href="departments-list.php">
               <span class="link-title">Departments</span>
-              <i class="mdi mdi-animation link-icon"></i>
+              <i class="mdi mdi-archive link-icon"></i>
             </a>
           </li>
           <li>
@@ -91,7 +93,7 @@
           <li>
             <a href="sections-list.php">
               <span class="link-title">Sections</span>
-              <i class="mdi mdi-library-books link-icon"></i>
+              <i class="mdi mdi-code-equal link-icon"></i>
             </a>
           </li>
           <li>
@@ -128,7 +130,7 @@
                     <div class="row">
                       <div class="col-9">
                         <div class="d-flex justify-content-between">
-                          <p class="card-title">128</p>
+                          <p class="card-title"><?php echo $user; ?></p>
                         </div>
                         <h5 class="text-black">Total Users</h5>
                       </div>
@@ -145,7 +147,7 @@
                     <div class="row">
                       <div class="col-9">
                         <div class="d-flex justify-content-between">
-                          <p class="card-title">128</p>
+                          <p class="card-title"><?php echo $school;?></p>
                         </div>
                         <h5 class="text-black">Total Schools</h5>
                       </div>
@@ -162,7 +164,7 @@
                     <div class="row">
                       <div class="col-9">
                         <div class="d-flex justify-content-between">
-                          <p class="card-title">128</p>
+                          <p class="card-title"><?php echo $program; ?></p>
                         </div>
                         <h5 class="text-black">Total Programs</h5>
                       </div>
@@ -179,7 +181,7 @@
                     <div class="row">
                       <div class="col-9">
                         <div class="d-flex justify-content-between">
-                          <p class="card-title">128</p>
+                          <p class="card-title"><?php echo $course; ?></p>
                         </div>
                         <h5 class="text-black">Total Courses</h5>
                       </div>

@@ -7,7 +7,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Programs List</title>
+    <title>Programs List | Admin</title>
     <!-- plugins:css -->
     <link rel="stylesheet" href="../assets/vendors/iconfonts/mdi/css/materialdesignicons.css">
     <link rel="stylesheet" href="../assets/vendors/css/vendor.addons.css">
@@ -49,7 +49,7 @@
             <img class="profile-img img-lg rounded-circle" src="../assets/images/profile/male/image_1.png" alt="profile image">
           </div>
           <div class="info-wrapper">
-            <h4 class="user-name">Mr. Admin</h4>
+            <h4 class="user-name"><?php echo $_SESSION["name"]; ?></h4>
           </div>
         </div>
         <ul class="navigation-menu">
@@ -75,10 +75,10 @@
           <li>
             <a href="departments-list.php">
               <span class="link-title">Departments</span>
-              <i class="mdi mdi-animation link-icon"></i>
+              <i class="mdi mdi-archive link-icon"></i>
             </a>
           </li>
-          <li>
+          <li class="active">
             <a href="programs-list.php">
               <span class="link-title">Programs</span>
               <i class="mdi mdi-clipboard-outline link-icon"></i>
@@ -93,7 +93,7 @@
           <li>
             <a href="sections-list.php">
               <span class="link-title">Sections</span>
-              <i class="mdi mdi-library-books link-icon"></i>
+              <i class="mdi mdi-code-equal link-icon"></i>
             </a>
           </li>
           <li>
@@ -110,7 +110,7 @@
           <div class="content-viewport">
             <div class="row">
               <div class="col-9 py-5">
-                <h4>Dashboard</h4>
+                <h4>Programs List</h4>
                 <div class="viewport-header">
                   <nav aria-label="breadcrumb">
                     <ol class="breadcrumb has-arrow">
@@ -140,7 +140,6 @@
                           <th>Department ID</th>
                           <th>Total PLO</th>
                           <th>Total Courses</th>
-                          <th>Total Students</th>
                         </tr>
                       </thead>
                       <tbody>
@@ -153,7 +152,6 @@
                               <td>".strtoupper($program['department'])."</td>
                               <td>".$program['plo']."</td>
                               <td>".$program['course']."</td>
-                              <td></td>
                             </tr>
                             ";
                           }

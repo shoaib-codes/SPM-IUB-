@@ -8,7 +8,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Label - Premium Responsive Bootstrap 4 Admin & Dashboard Template</title>
+  <title>Enrollment Comparison | Dean</title>
   <!-- plugins:css -->
   <link rel="stylesheet" href="../assets/vendors/iconfonts/mdi/css/materialdesignicons.css">
   <link rel="stylesheet" href="../assets/vendors/css/vendor.addons.css">
@@ -50,7 +50,7 @@
           <img class="profile-img img-lg rounded-circle" src="../assets/images/profile/male/image_1.png" alt="profile image">
         </div>
         <div class="info-wrapper">
-          <h4 class="user-name">Mr. Dean</h4>
+          <h4 class="user-name"><?php echo $_SESSION["name"]; ?></h4>
         </div>
       </div>
       <ul class="navigation-menu">
@@ -91,12 +91,13 @@
     <div class="page-content-wrapper">
       <div class="page-content-wrapper-inner">
         <div class="row">
-          <div class="col-6">
+          <div class="col-6 py-5">
+          <h4>Enrollment Comparison</h4>
             <div class="viewport-header">
               <nav aria-label="breadcrumb">
                 <ol class="breadcrumb has-arrow">
                   <li class="breadcrumb-item">
-                    <a href="#">Dashboard</a>
+                    <a href="dashboard.php">Dean</a>
                   </li>
                   <li class="breadcrumb-item active" aria-current="page">Enrollmant Comparison</li>
                 </ol>

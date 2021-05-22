@@ -391,7 +391,7 @@
               data: [
                 <?php
                   if(isset($_GET['name'])){
-                    foreach($plo_attempted as $k => $v){
+                    foreach($plo_attemptedE as $k => $v){
                       echo $plo_attemptedE[$k]-$plo_achievedE[$k] .",";
                     }
                   }                   
@@ -442,7 +442,7 @@
               data: [
                 <?php
                   if(isset($_GET['name'])){
-                    foreach($co_attempted as $k => $v){
+                    foreach($co_attemptedE as $k => $v){
                       echo $co_attemptedE[$k]-$co_achievedE[$k] .",";
                     }
                   }                   

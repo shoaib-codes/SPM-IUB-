@@ -19,27 +19,27 @@ SPMS is a web-based application which is written in PHP. The main purpose of our
 # Login information
 There are some users which has been created beforehand. The users are student, head, dean, faculty and admin. Some dummy users' login info is given below:
 
-Student:
+- Student:
 ID: 1612985@iub.edu.bd
 Password: 12345678
 
-Head:
+- Head:
 ID: faculty@iub.edu.bd
 Password: 12345678
 
-Dean:
+- Dean:
 ID: faculty1@iub.edu.bd
 Password: 12345678
 
-Admin:
+- Admin:
 ID: admin@iub.edu.bd
 Password: 12345678
 
 # Contributors
-=> Abu Musa Sakib - 1810617
-=> Abdullah Al Akib - 1930885
-=> Farhana Afruz - 1821821
-=> Md Rubaut Reshed Chowdhury - 1721088
-=> Mohammed Shoaib - 1930258
-=> Sumyia Afnan Mukta - 1810668
+* Abu Musa Sakib - 1810617
+* Abdullah Al Akib - 1930885
+* Farhana Afruz - 1821821
+* Md Rubaut Reshed Chowdhury - 1721088
+* Mohammed Shoaib - 1930258
+* Sumyia Afnan Mukta - 1810668
 
